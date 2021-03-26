@@ -123,18 +123,7 @@ class MDN_prediction():
         return y_pred_mean, y_pred_std
 
 
-    def MAPE_calc(self, percentage_error, error, threshold):
-        MAPE = 0
-        c = 0
-        for i in range(len(error)):
-            if error[i] < threshold[i]:
-                MAPE += percentage_error[i]
-                c    += 1
-        if c ==0: 
-            MAPE = -1
-            return MAPE
-        else:
-            return MAPE/c
+
 
 
 #%%
